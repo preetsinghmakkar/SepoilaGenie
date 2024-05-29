@@ -14,6 +14,9 @@ const fetchContract = async () => {
     SepoliaGenieABI,
     wallet
   );
+
+  console.log("CONtract in fetchCOntract : ", contract);
+
   return contract;
 };
 
