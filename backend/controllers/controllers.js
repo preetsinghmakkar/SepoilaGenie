@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+const { CONTRACT_ADDRESS, ALCHEMY_API_KEY, PRIVATE_KEY } = process.env;
+
 const fetchContract = async () => {
   const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
