@@ -36,8 +36,8 @@ export const ContractBalance = async (req, res) => {
   try {
     console.log("Fetching contract balance...");
     console.log("Contract Address: ", CONTRACT_ADDRESS);
-    console.log("Alchemy API Key: ", ALCHEMY_API_KEY ? "Present" : "Missing");
-    console.log("Private Key: ", PRIVATE_KEY ? "Present" : "Missing");
+    console.log("Alchemy API Key: ", ALCHEMY_API_KEY);
+    console.log("Private Key: ", PRIVATE_KEY);
 
     const contract = await fetchContract();
 
