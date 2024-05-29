@@ -4,17 +4,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const CONTRACT_ADDRESS = "0xaefA776CeB100CbAB55d8BF5CFd99d957383E953";
-const PRIVATE_KEY =
-  "6789d0a31997141b52b9a17b8abdc9e64c5d920491af616a27d884d3f89a49f4";
-const ALCHEMY_API_KEY =
-  "https://eth-sepolia.g.alchemy.com/v2/ttrfiYa7JJgxBPZ_e3XroIoDwyRuEJhd";
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 
 const fetchContract = async () => {
   const provider = new ethers.JsonRpcProvider(ALCHEMY_API_KEY);
-  console.log(provider);
   const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
-  console.log(wallet);
   const contract = new ethers.Contract(
     CONTRACT_ADDRESS,
     SepoliaGenieABI,
