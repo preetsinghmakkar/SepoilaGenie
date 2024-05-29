@@ -39,9 +39,12 @@ const Main = ({ setEnableDonate, contractBalance }) => {
 
     setIsLoading(true);
     try {
-      const Claim = await axios.post("http://localhost:3000/claim", {
-        account,
-      });
+      const Claim = await axios.post(
+        "https://sepoila-genie-backend.vercel.app/claim",
+        {
+          account,
+        }
+      );
       toast.success(Claim.data);
       localStorage.setItem("lastClaimTime", Date.now());
       setCooldownExpired(false);
