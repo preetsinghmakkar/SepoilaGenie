@@ -32,43 +32,72 @@ Follow these steps to set up the project locally:
    ```
 
 2. Install the dependencies:
+
+```sh
+
    npm install
 
+```
+
 3. Create a .env file and add the following environment variables:
+
    PORT=
    CONTRACT_ADDRESS=
    PRIVATE_KEY=
    ALCHEMY_API_KEY=
 
 4. Start the backend server:
-   npm run dev
 
-Frontend.
+```sh
+   npm run dev
+```
+
+### Frontend.
 
 1. Navigate to the frontend folder:
+
+```sh
    cd frontend
+```
 
 2. Install the dependencies:
+
+```sh
    npm install
+```
 
 3.Create a .env file and add the following environment variables:
+
 VITE_CONTRACT_ADDRESS=DEPLOYED_CONTRACT_ADDRESS
 
 4. Start the frontend development server:
-   npm start
 
-3.Hardhat
+```sh
+   npm start
+```
+
+### Hardhat
 
 1.Navigate to the hardhat folder:
+
+```sh
 cd hardhat
+```
 
 2. Install the dependencies:
+
+```sh
    npm install
+```
 
 3. Create a .env file and add the following environment variables:
+
    ALCHEMY_API_KEY=
    ACCOUNT_PRIVATE_KEY=
    ETHERSCAN_API_KEY=
 
 4. Deploy the smart contract to the Sepolia testnet:
+
+```sh
    npx hardhat run scripts/deploy.js --network sepolia
+```
