@@ -24,9 +24,7 @@ const fetchContract = async () => {
 export const Claim = async (req, res) => {
   try {
     const { account } = req.body;
-    console.log("Account", account);
     const contract = await fetchContract();
-    console.log("Contract : ", contract);
     const sendingEth = await contract.claim(account);
     await sendingEth.wait();
     res.status(200).json(`Successfully Transferred to:${account}`);
