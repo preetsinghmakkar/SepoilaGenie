@@ -26,10 +26,9 @@ export const Claim = async (req, res) => {
     const { account } = req.body;
     console.log("Account", account);
     const contract = await fetchContract();
-
+    console.log("Contract : ", contract);
     const sendingEth = await contract.claim(account);
     await sendingEth.wait();
-
     res.status(200).json(`Successfully Transferred to:${account}`);
   } catch (error) {
     res.status(500).json({ error: "Error in Claim " });
