@@ -13,7 +13,9 @@ const Donaters = ({ setEnableDonate }) => {
   const [allDonor, setAllDonor] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const ContractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+  // const ContractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+
+  const ContractAddress = "0xaefA776CeB100CbAB55d8BF5CFd99d957383E953";
 
   const getSigner = async () => {
     await window.ethereum.request({ method: "eth_requestAccounts" });
