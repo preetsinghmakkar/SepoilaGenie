@@ -41,7 +41,12 @@ export const ContractBalance = async (req, res) => {
 
     const contract = await fetchContract();
 
+    console.log("Contract : ", contract);
+
     const contractBalance = await contract.getBalance();
+
+    console.log(contractBalance);
+
     const balance = ethers.formatEther(contractBalance);
 
     res.status(200).json(balance);
