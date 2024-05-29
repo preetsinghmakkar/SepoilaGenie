@@ -12,7 +12,7 @@ const App = () => {
     const ContractBalance = async (event) => {
       try {
         const contractBalance = await axios.get(
-          "https://sepoila-genie-backend.vercel.app/ContractBalance"
+          "http://localhost:3000/ContractBalance"
         );
         setContractBalance(contractBalance.data);
       } catch (error) {
