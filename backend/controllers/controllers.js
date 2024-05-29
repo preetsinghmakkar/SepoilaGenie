@@ -8,6 +8,7 @@ const fetchContract = async () => {
   const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
   console.log(provider);
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+  console.log(wallet);
   const contract = new ethers.Contract(
     process.env.CONTRACT_ADDRESS,
     SepoliaGenieABI,
