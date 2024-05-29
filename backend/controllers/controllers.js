@@ -4,21 +4,15 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const { CONTRACT_ADDRESS, ALCHEMY_API_KEY, PRIVATE_KEY } = process.env;
-
 const fetchContract = async () => {
   const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
-  console.log("Provider : ", provider);
+  console.log(provider);
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-  console.log("Wallet : ", wallet);
   const contract = new ethers.Contract(
     process.env.CONTRACT_ADDRESS,
     SepoliaGenieABI,
     wallet
   );
-
-  console.log("CONtract in fetchCOntract : ", contract);
-
   return contract;
 };
 
@@ -39,22 +33,7 @@ export const Claim = async (req, res) => {
 
 export const ContractBalance = async (req, res) => {
   try {
-    console.log("Fetching contract balance...");
-    console.log("Contract Address: ", CONTRACT_ADDRESS);
-    console.log("Alchemy API Key: ", ALCHEMY_API_KEY);
-    console.log("Private Key: ", PRIVATE_KEY);
-
-    const provider = new JsonRpcProvider(process.env.ALCHEMY_API_KEY)();
-    console.log("Provider : ", provider);
-    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-    console.log("Wallet : ", wallet);
-    const contract = new ethers.Contract(
-      process.env.CONTRACT_ADDRESS,
-      SepoliaGenieABI,
-      wallet
-    );
-
-    // const contract = await fetchContract();
+    const contract = await fetchContract();
 
     console.log("Contract : ", contract);
 
