@@ -45,7 +45,7 @@ export const ContractBalance = async (req, res) => {
     console.log("Private Key: ", PRIVATE_KEY);
 
     const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
-    console.log("Provider : ", provider);
+    // console.log("Provider : ", provider);
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
     console.log("Wallet : ", wallet);
     const contract = new ethers.Contract(
