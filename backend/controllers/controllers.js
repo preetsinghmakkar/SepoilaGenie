@@ -24,7 +24,7 @@ const fetchContract = async () => {
 export const Claim = async (req, res) => {
   try {
     const { account } = req.body;
-
+    console.log("Account", account);
     const contract = await fetchContract();
 
     const sendingEth = await contract.claim(account);
