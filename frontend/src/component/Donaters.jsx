@@ -70,7 +70,7 @@ const Donaters = ({ setEnableDonate }) => {
 
     try {
       const getAllDonors = await axios.get(
-        "https://sepoila-genie-backend.vercel.app/allDonors"
+        "https://sepoilageniebackend.vercel.app/allDonors"
       );
 
       setAllDonor(getAllDonors.data);

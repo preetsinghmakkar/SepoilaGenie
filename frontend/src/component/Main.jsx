@@ -40,7 +40,7 @@ const Main = ({ setEnableDonate, contractBalance }) => {
     setIsLoading(true);
     try {
       const Claim = await axios.post(
-        "https://sepoila-genie-backend.vercel.app/claim",
+        "https://sepoilageniebackend.vercel.app/claim",
         {
           account,
         }
