@@ -1,4 +1,4 @@
-# SepoliaGenie
+# SepoliaGenie https://sepoila-genie.vercel.app/
 
 SepoliaGenie is a decentralized application (DApp) that allows users to claim 0.05 Sepolia ETH every 24 hours for free. Additionally, users can donate Sepolia ETH to help others receive the same benefit. This project is built with a backend for handling requests, a frontend for user interaction, and smart contracts deployed on the Sepolia testnet.
 
